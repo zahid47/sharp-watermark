@@ -1,89 +1,34 @@
 import Sharp from "sharp";
+import getValidatedOptions from "./helpers/getValidatedOptions";
+import getWatermarkSize from "./helpers/getWatermarkSize";
+import positions from "./helpers/positions";
+import { Options } from "./helpers/types";
 
-const defaultOptions = {
-  ratio: 0.6,
-  // opacity: 0.6,
-  position: "center",
-  x: undefined,
-  y: undefined,
-};
-
-interface Options {
-  ratio?: number;
-  // opacity?: number;
-  position?:
-    | "center"
-    | "top"
-    | "bottom"
-    | "left"
-    | "right"
-    | "topLeft"
-    | "topRight"
-    | "bottomLeft"
-    | "bottomRight";
-  x?: number;
-  y?: number;
-}
-
-interface Position {
-  [key: string]: Sharp.Gravity;
-}
-
-const positions: Position = {
-  center: "center",
-  top: "north",
-  bottom: "south",
-  left: "west",
-  right: "east",
-  topLeft: "northwest",
-  topRight: "northeast",
-  bottomLeft: "southwest",
-  bottomRight: "southeast",
-};
-
-const validateOptions = (options: Options) => {
-  const { ratio, position, x, y } = options;
-
-  if (ratio && (ratio < 0 || ratio > 1)) {
-    throw new Error("Ratio should be between 0 and 1");
-  }
-  // if (opacity && (opacity < 0 || opacity > 1)) {
-  //   throw new Error("Opacity should be between 0 and 1");
-  // }
-  if (x && x < 0) {
-    throw new Error("X coordinate should be greater than 0");
-  }
-  if (y && y < 0) {
-    throw new Error("Y coordinate should be greater than 0");
-  }
-  if (position) {
-    if (!positions[position]) {
-      throw new Error(
-        "Invalid position. Valid positions are: center, top, bottom, left, right, topLeft, topRight, bottomLeft, bottomRight"
-      );
-    }
-  }
-
-  return true;
-};
-
-export const addWatermark = async (
-  mainImage: any,
-  watermarkImage: any,
+/**
+ * Adds a watermark image to a main image.
+ * @async
+ * @param {string|Buffer} mainImage - The main image to which the watermark will be added.
+ * @param {string|Buffer} watermarkImage - The watermark image to be added to the main image.
+ * @param {Options} options - An object containing optional values for the watermark position, size, etc.
+ * @throws {Error} Invalid ratio value.
+ * @throws {Error} Invalid x-coordinate value.
+ * @throws {Error} Invalid y-coordinate value.
+ * @throws {Error} Invalid position value.
+ * @returns {Promise<Sharp.Sharp>} The main image object with the watermark applied.
+ */
+export const addImageWatermark = async (
+  mainImage: string | Buffer,
+  watermarkImage: string | Buffer,
   options: Options
-) => {
-  validateOptions(options);
-  const { ratio, position, x, y } = { ...defaultOptions, ...options };
+): Promise<Sharp.Sharp> => {
+  const { ratio, position, x, y } = getValidatedOptions(options);
 
   const mainImageSharp = Sharp(mainImage);
 
-  const { height: mainImageHeight, width: mainImageWidth } =
-    await mainImageSharp.metadata().then(({ height, width }) => {
-      return { height, width };
-    });
-
-  const waterMarkHeight = Math.round(mainImageHeight! * ratio);
-  const waterMarkWidth = Math.round(mainImageWidth! * ratio);
+  const { waterMarkHeight, waterMarkWidth } = await getWatermarkSize(
+    mainImageSharp,
+    ratio
+  );
 
   const mainImageBuffer = await mainImageSharp.toBuffer();
 

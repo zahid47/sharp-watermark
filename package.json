@@ -1,7 +1,7 @@
 {
   "name": "sharp-watermark",
   "description": "Add watermarks to your images",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -20,6 +20,7 @@
     "watermark"
   ],
   "devDependencies": {
+    "@types/node": "^18.15.11",
     "typescript": "^5.0.3"
   },
   "dependencies": {

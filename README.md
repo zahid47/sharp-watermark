@@ -15,9 +15,9 @@ yarn add sharp-watermark
 ## Usage
 
 ```javascript
-import { addWatermark } from "sharp-watermark";
+import { addImageWatermark } from "sharp-watermark";
 
-const watermarkedImage = await addWatermark(
+const watermarkedImage = await addImageWatermark(
   "mainImgPath.png",
   "watermarkPath.jpg",
   options
@@ -46,11 +46,11 @@ const buffer = await watermarkedImage.toBuffer();
 NOTE: If you specify the the `position` option, the `x` and `y` options will be ignored.
 
 ## Roadmap
-- Add support for buffer as parameter
-- Add support for watermarking multiple images at once
-- Add support for pattern watermarking
-- Add support for watermarking with text
-- Add support for changing the opacity of the watermark
+- [x] Add support for buffer as parameter
+- [ ] Add support for watermarking multiple images at once
+- [ ] Add support for pattern watermarking
+- [ ] Add support for watermarking with text
+- [ ] Add support for changing the opacity of the watermark
 
 
 ## Special Thanks
