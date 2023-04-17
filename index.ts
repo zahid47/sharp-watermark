@@ -25,7 +25,7 @@ export const addImageWatermark = async (
 
   const mainImageSharp = Sharp(mainImage);
 
-  const { waterMarkHeight, waterMarkWidth } = await getWatermarkSize(
+  const { waterMarkWidth } = await getWatermarkSize(
     mainImageSharp,
     ratio
   );
@@ -35,7 +35,7 @@ export const addImageWatermark = async (
   const watermarkImageBuffer = await Sharp(watermarkImage).toBuffer();
 
   const watermark = await Sharp(watermarkImageBuffer)
-    .resize(waterMarkWidth, waterMarkHeight)
+    .resize(waterMarkWidth) // only passing width will maintain the aspect ratio
     .toBuffer();
 
   return Sharp(mainImageBuffer)

@@ -21,6 +21,8 @@ const getWatermarkSize = async (
 
   if (!mainImageHeight || !mainImageWidth) throw INVALID_IMAGE;
 
+  // now calculate watermark height and width based on the main image height and width and ratio
+  // but need to maintain the aspect ratio of the watermark image
   const waterMarkHeight = Math.round(mainImageHeight * ratio);
   const waterMarkWidth = Math.round(mainImageWidth * ratio);
 
