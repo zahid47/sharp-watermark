@@ -48,20 +48,20 @@ The options parameter is an object that contains the following properties:
 
 - ratio (default: `0.6`): the ratio of the watermark image to the main image.
 - position (default: `center`): the position of the watermark image. Can be one of the following: `topLeft`, `top`, `topRight`, `left`, `center`, `right`, `bottomLeft`, `bottom`, `bottomRight`.
-- x (default: undefined): the x coordinate of the watermark image. This is ignored if the `position` property is passed.
-- y (default: undefined): the y coordinate of the watermark image. This is ignored if the `position` property is passed.
+- x (default: `undefined`): the x coordinate of the watermark image. This is ignored if the `position` property is passed.
+- y (default: `undefined`): the y coordinate of the watermark image. This is ignored if the `position` property is passed.
 
 ## Roadmap
 
-- [x] Add support for buffer as parameter
-- [ ] Add support for watermarking multiple images at once
-- [ ] Add support for pattern watermarking
-- [ ] Add support for watermarking with text
-- [ ] Add support for changing the opacity of the watermark
+- [x] Add support for buffer as parameter.
+- [ ] Add support for watermarking multiple images at once.
+- [ ] Add support for pattern watermarking.
+- [ ] Add support for watermarking with text.
+- [ ] Add support for changing the opacity of the watermark.
 
 ## Special Thanks
 
-- [sharp](https://github.com/lovell/sharp) - The image processing library used in this project
+- [sharp](https://github.com/lovell/sharp) - The image processing library used in this project.
 - [jimp-watermark](https://github.com/sushantpaudel/jimp-watermark) - The inspiration for this project. Reasons to use this package over jimp-watermark:
-  - Less file size
-  - Support for watermark positioning
+  - Less file size.
+  - Support for watermark positioning.
