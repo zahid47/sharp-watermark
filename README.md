@@ -39,7 +39,7 @@ const buffer = await watermarkedImage.toBuffer();
 
 ### Options
 - ratio - the ratio of the watermark image to the main image. Default is 0.6
-- position - the position of the watermark image. Default is 'center'. Can be one of the following: `topLeft`, `top`, `topRight`, `left`, `center`, `right`, `bottomLeft`, `bottom`, `bottomRight`
+- position - the position of the watermark image. Default is `center`. Can be one of the following: `topLeft`, `top`, `topRight`, `left`, `center`, `right`, `bottomLeft`, `bottom`, `bottomRight`
 - x - the x coordinate of the watermark image
 - y - the y coordinate of the watermark image
 
