@@ -19,7 +19,7 @@ import { Options } from "./helpers/types";
 export const addImageWatermark = async (
   mainImage: string | Buffer,
   watermarkImage: string | Buffer,
-  options: Options
+  options: Options = {}
 ): Promise<Sharp.Sharp> => {
   const { ratio, position, x, y } = getValidatedOptions(options);
 
