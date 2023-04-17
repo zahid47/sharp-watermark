@@ -1,0 +1,23 @@
+{
+  "name": "sharp-watermark",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "repository": "https://github.com/zahid47/sharp-watermark.git",
+  "homepage": "https://github.com/zahid47/sharp-watermark.git#readme",
+  "author": "zahid <epiczahid@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "sharp": "^0.32.0"
+  }
+}
