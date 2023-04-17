@@ -25,7 +25,11 @@ interface Options {
   y?: number;
 }
 
-const positions = {
+interface Position {
+  [key: string]: Sharp.Gravity;
+}
+
+const positions: Position = {
   center: "center",
   top: "north",
   bottom: "south",
@@ -95,7 +99,7 @@ export const addWatermark = async (
         input: watermark,
         top: y,
         left: x,
-        gravity: position,
+        gravity: positions[position],
       },
     ])
     .withMetadata();
