@@ -14,6 +14,10 @@
   "homepage": "https://github.com/zahid47/sharp-watermark.git#readme",
   "author": "zahid <epiczahid@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "sharp",
+    "watermark"
+  ],
   "devDependencies": {
     "typescript": "^5.0.3"
   },
