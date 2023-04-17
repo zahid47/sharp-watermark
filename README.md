@@ -64,3 +64,4 @@ The options parameter is an object that contains the following properties:
 - [jimp-watermark](https://github.com/sushantpaudel/jimp-watermark) - The inspiration for this project. Reasons to use this package over jimp-watermark:
   - Less file size.
   - Support for watermark positioning.
+  - built in type definitions.
