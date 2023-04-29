@@ -1,5 +1,9 @@
 # sharp-watermark
 
+![npm type definitions](https://img.shields.io/npm/types/sharp-watermark?label=%20&logo=typescript&logoColor=white&style=flat-square)
+![npm](https://img.shields.io/npm/dt/sharp-watermark?label=Downloads&style=flat-square)
+![npm](https://img.shields.io/npm/v/sharp-watermark?color=orange&logo=npm&logoColor=white&style=flat-square)
+
 ## Installation
 
 ```bash
