@@ -1,7 +1,7 @@
 {
   "name": "sharp-watermark",
-  "description": "Add watermark to your images",
-  "version": "0.4.0",
+  "description": "Effortlessly add watermarks to your images",
+  "version": "0.5.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
