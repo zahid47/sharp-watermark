@@ -30,14 +30,6 @@ const watermarkedImage = await addImageWatermark(
 );
 ```
 
-#### Parameters
-
-The `addImageWatermark` function takes the following parameters:
-
-1. `mainImage` (required): The main image to which the watermark will be added. It can be either a string path or a buffer representing the image.
-2. `watermarkImage` (required): The watermark image to be added to the main image. It can be either a string path or a buffer representing the image.
-3. `options` (optional): an object containing the options for the watermarking process. See the [Options](#options) section for more details.
-
 ### Add a **text** watermark:
 
 ```javascript
@@ -50,13 +42,12 @@ const watermarkedImage = await addTextWatermark(
 );
 ```
 
-#### Parameters
+### Parameters
 
-The `addTextWatermark` function takes the following parameters:
-
-1. `mainImage` (required): The main image to which the watermark will be added. It can be either a string path or a buffer representing the image.
-2. `watermarkText` (required): The text to be used as the watermark.
-3. `options` (optional): an object containing the options for the watermarking process. See the [Options](#options) section for more details.
+- `mainImage` (required): The main image to which the watermark will be added. It can be either a string path or a buffer representing the image.
+- `watermarkImage` (required): The watermark image to be added to the main image. It can be either a string path or a buffer representing the image.
+- `watermarkText` (required): The text to be used as the watermark.
+- `options` (optional): an object containing the options for the watermarking process. See the [Options](#options) section for more details.
 
 Access the watermarked image:
 
