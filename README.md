@@ -45,8 +45,8 @@ const watermarkedImage = await addTextWatermark(
 ### Parameters
 
 - `mainImage` (required): The main image to which the watermark will be added. It can be either a string path or a buffer representing the image.
-- `watermarkImage` (required): The watermark image to be added to the main image. It can be either a string path or a buffer representing the image.
-- `watermarkText` (required): The text to be used as the watermark.
+- `watermarkImage` (required for image watermarks): The watermark image to be added to the main image. It can be either a string path or a buffer representing the image.
+- `watermarkText` (required for text watermarks): The text to be used as the watermark.
 - `options` (optional): an object containing the options for the watermarking process. See the [Options](#options) section for more details.
 
 Access the watermarked image:
