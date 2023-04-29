@@ -1,5 +1,6 @@
 import defaultOptions from "./defaultOptions";
 import {
+  INVALID_OPACITY,
   INVALID_POSITION,
   INVALID_RATIO,
   INVALID_X_COORDINATE,
@@ -19,11 +20,11 @@ import { Options } from "./types";
  */
 const getValidatedOptions = (options: Options) => {
   const allOptions = { ...defaultOptions, ...options };
-  const { ratio, position, x, y } = allOptions;
+  const { ratio, opacity, position, x, y } = allOptions;
 
   if (ratio && (ratio < 0 || ratio > 1)) throw INVALID_RATIO;
 
-  // if (opacity && (opacity < 0 || opacity > 1)) throw INVALID_OPACITY;
+  if (opacity && (opacity < 0 || opacity > 1)) throw INVALID_OPACITY;
 
   if (x && x < 0) throw INVALID_X_COORDINATE;
 

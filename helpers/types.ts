@@ -2,7 +2,8 @@ import { Gravity } from "sharp";
 
 export interface Options {
   ratio?: number;
-  // opacity?: number;
+  dpi?: number;
+  opacity?: number;
   position?:
     | "center"
     | "top"
