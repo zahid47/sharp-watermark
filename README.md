@@ -10,12 +10,6 @@
 npm install sharp-watermark
 ```
 
-OR
-
-```bash
-yarn add sharp-watermark
-```
-
 ## Usage
 
 ### Add an **image** watermark:
