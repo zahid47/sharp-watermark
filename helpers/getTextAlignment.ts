@@ -1,4 +1,4 @@
-import { TextAlign } from "sharp";
+import type { TextAlign } from "sharp";
 import type { Options } from "./types";
 
 const getTextAlignment = (

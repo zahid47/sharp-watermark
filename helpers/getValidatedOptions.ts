@@ -7,7 +7,7 @@ import {
   INVALID_Y_COORDINATE,
 } from "./errorMessages";
 import positions from "./positions";
-import { Options } from "./types";
+import type { Options } from "./types";
 
 /**
  * Validates the options object and returns a new object with validated values.

@@ -4,7 +4,7 @@ import getWatermarkSize from "./helpers/getWatermarkSize";
 import positions from "./helpers/positions";
 import getTextAlignment from "./helpers/getTextAlignment";
 import getAlpha from "./helpers/getAlpha";
-import { Options } from "./helpers/types";
+import type { Options } from "./helpers/types";
 
 /**
  * Adds a watermark image to a main image.

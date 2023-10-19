@@ -1,4 +1,4 @@
-import { Sharp } from "sharp";
+import type { Sharp } from "sharp";
 import { INVALID_IMAGE } from "./errorMessages";
 
 /**

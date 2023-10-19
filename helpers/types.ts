@@ -1,4 +1,4 @@
-import { Gravity } from "sharp";
+import type { Gravity } from "sharp";
 
 export interface Options {
   ratio?: number;

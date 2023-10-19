@@ -1,4 +1,4 @@
-import { Position } from "./types";
+import type { Position } from "./types";
 
 const positions: Position = {
   center: "center",
