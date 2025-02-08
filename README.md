@@ -10,6 +10,10 @@
 npm install sharp-watermark
 ```
 
+#### Sharp Peer Depedency
+
+Starting with version 0.6.0, `sharp` is a peer dependency that will no longer be installed automatically by including this library. Instead, the parent project that includes this library must install `sharp` in its dependencies. This avoids conflicts with varying `sharp` versions.
+
 ## Usage
 
 ### Add an **image** watermark:
